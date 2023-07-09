@@ -1,0 +1,152 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+@font-face {
+    font-family: "Bnha";
+    src: url("commando.ttf") format('truetype')
+}
+
+
+body {
+	font-family: "Bnha", Arial, Helvetica, sans-serif;
+	background-color: hsl(0, 0%, 0%);
+	color: #ffffff;
+	overflow: hidden;
+}
+
+body::before{
+    content: "";
+    background: url(../imagens/bg-desktop.jpg) no-repeat center center/cover;
+	background-attachment: local;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.1;
+	
+}
+
+
+.header {
+	display: flex;
+	justify-content: center;
+}
+
+
+.logo {
+	width: 20%;
+	margin-bottom: 20px;
+	
+}
+
+.selecao-de-personagens {
+	display: flex;
+	align-items: center;
+	gap: 20;
+    min-height: calc(100vh - 152px);
+    justify-content: center;
+	
+}
+
+.personagens {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 585px;
+	gap: 25px;
+}
+
+.personagem {
+	width: 25%;
+	border: 1px rgb(71, 71, 71) solid;
+}
+
+.personagem-grande.animate-in {
+	animation: animateIn 0.5s forwards;
+  }
+  
+
+.lista-de-personagens {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: center;
+	margin-bottom: 30vh;
+}
+
+ .titulo {
+	font-size: 20px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	border-bottom: 2px solid #d32013;
+	width: 100%;
+	text-align: center;
+	
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	
+}
+
+.personagem-grande {
+	width: 430px;
+	height:430px;
+	object-fit: contain;
+}
+
+.personagem.selecionado {
+	box-shadow: rgba(180, 29, 29, 0.973) 0px 22px 70px 4px;
+	transition: box-shadow 0.2s ease-in;	
+}
+
+.personagem-selecionado {
+    text-align: center;
+    max-height: 530px;
+	z-index: -1;
+	margin-bottom: 30vh;
+}
+
+.informacoes-personagem {
+	margin-left: 6vw;
+}
+
+ .nome-personagem{
+    border-bottom: 2px solid #d32013;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.descricao-personagem{
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 20px;
+	margin-bottom: 50px;
+    width: 420px;
+}
+
+@keyframes animateIn {
+	0% {
+	  opacity: 0;
+	  transform: translateX(-100px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateX(0);
+	}
+  }
+  
+ 
+  
+  
+
+
